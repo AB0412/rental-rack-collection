@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { CalendarDays, Mail, MapPin, Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
 const ContactSection = () => {
   const handleSubmit = (event: React.FormEvent) => {
@@ -62,41 +62,16 @@ const ContactSection = () => {
             </CardContent>
           </Card>
 
-          <div className="space-y-6">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4 text-rental-dark">Our Location</h3>
-              <div className="flex items-start space-x-4">
-                <MapPin className="h-5 w-5 text-rental-DEFAULT mt-1" />
-                <p className="text-gray-600">
-                  123 Rental Street, Suite 101<br />
-                  Anytown, ST 12345
-                </p>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-4 text-rental-dark">Contact Information</h3>
+            <div className="space-y-4">
+              <div className="flex items-center space-x-4">
+                <Phone className="h-5 w-5 text-rental-DEFAULT" />
+                <p className="text-gray-600">(123) 456-7890</p>
               </div>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4 text-rental-dark">Contact Information</h3>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-4">
-                  <Phone className="h-5 w-5 text-rental-DEFAULT" />
-                  <p className="text-gray-600">(123) 456-7890</p>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <Mail className="h-5 w-5 text-rental-DEFAULT" />
-                  <p className="text-gray-600">info@rentalrack.com</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4 text-rental-dark">Business Hours</h3>
-              <div className="flex items-start space-x-4">
-                <CalendarDays className="h-5 w-5 text-rental-DEFAULT mt-1" />
-                <div className="text-gray-600">
-                  <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                  <p>Saturday: 10:00 AM - 4:00 PM</p>
-                  <p>Sunday: Closed</p>
-                </div>
+              <div className="flex items-center space-x-4">
+                <Mail className="h-5 w-5 text-rental-DEFAULT" />
+                <p className="text-gray-600">info@rentalrack.com</p>
               </div>
             </div>
           </div>
