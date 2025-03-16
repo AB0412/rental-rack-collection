@@ -9,6 +9,7 @@ type RentalItem = {
   icon: JSX.Element;
   category: 'furniture' | 'tent' | 'stage';
   description: string;
+  image?: string;
 };
 
 const rentalItems: RentalItem[] = [
@@ -66,7 +67,8 @@ const rentalItems: RentalItem[] = [
     price: 300,
     icon: <Tent className="h-10 w-10 text-rental-DEFAULT" />,
     category: 'tent',
-    description: "20×30 gazebo style tent, elegant option for special events."
+    description: "20×30 gazebo style tent, elegant option for special events.",
+    image: "/lovable-uploads/f935d5e3-5a78-4b5e-9321-81cfdf7492db.png"
   },
   {
     id: 8,
@@ -134,7 +136,17 @@ const RentalItems = () => {
             {tentAndStageItems.map((item) => (
               <Card key={item.id} className="hover:shadow-lg transition-shadow">
                 <CardHeader className="pb-2">
-                  <div className="flex justify-center">{item.icon}</div>
+                  {item.image ? (
+                    <div className="flex justify-center">
+                      <img 
+                        src={item.image} 
+                        alt={item.name} 
+                        className="h-48 object-contain mb-4"
+                      />
+                    </div>
+                  ) : (
+                    <div className="flex justify-center">{item.icon}</div>
+                  )}
                   <CardTitle className="text-center mt-2">{item.name}</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
