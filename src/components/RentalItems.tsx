@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Chair, CircleOff, Table, TableProperties, Tent } from "lucide-react";
+import { Armchair, CircleOff, Table, TableProperties, Tent } from "lucide-react";
 
 type RentalItem = {
   id: number;
@@ -16,7 +16,7 @@ const rentalItems: RentalItem[] = [
     id: 1,
     name: "Chair",
     price: 1,
-    icon: <Chair className="h-10 w-10 text-rental-DEFAULT" />,
+    icon: <Armchair className="h-10 w-10 text-rental-DEFAULT" />,
     category: 'furniture',
     description: "Standard folding chair, perfect for any event."
   },
