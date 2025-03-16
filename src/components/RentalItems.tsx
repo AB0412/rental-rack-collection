@@ -1,6 +1,7 @@
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Armchair, CircleOff, Table, TableProperties, Tent } from "lucide-react";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
 type RentalItem = {
   id: number;
@@ -143,20 +144,49 @@ const RentalItems = () => {
                 <CardHeader className="pb-2">
                   {item.image ? (
                     <div className="flex flex-col justify-center">
-                      <img 
-                        src={item.image} 
-                        alt={item.name} 
-                        className="h-48 object-contain mb-4"
-                      />
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <img 
+                            src={item.image} 
+                            alt={item.name} 
+                            className="h-48 object-contain mb-4 cursor-pointer hover:opacity-90 transition-opacity"
+                          />
+                        </DialogTrigger>
+                        <DialogContent className="max-w-4xl">
+                          <DialogHeader>
+                            <DialogTitle>{item.name}</DialogTitle>
+                          </DialogHeader>
+                          <img 
+                            src={item.image} 
+                            alt={item.name}
+                            className="w-full object-contain max-h-[70vh]" 
+                          />
+                        </DialogContent>
+                      </Dialog>
+                      
                       {item.additionalImages && item.additionalImages.length > 0 && (
                         <div className="grid grid-cols-2 gap-2 mt-2">
                           {item.additionalImages.map((img, index) => (
-                            <img 
-                              key={index}
-                              src={img} 
-                              alt={`${item.name} view ${index + 1}`} 
-                              className="h-24 w-full object-cover rounded-md"
-                            />
+                            <Dialog key={index}>
+                              <DialogTrigger asChild>
+                                <img 
+                                  key={index}
+                                  src={img} 
+                                  alt={`${item.name} view ${index + 1}`} 
+                                  className="h-24 w-full object-cover rounded-md cursor-pointer hover:opacity-90 transition-opacity"
+                                />
+                              </DialogTrigger>
+                              <DialogContent className="max-w-4xl">
+                                <DialogHeader>
+                                  <DialogTitle>{`${item.name} - View ${index + 1}`}</DialogTitle>
+                                </DialogHeader>
+                                <img 
+                                  src={img}
+                                  alt={`${item.name} view ${index + 1}`}
+                                  className="w-full object-contain max-h-[70vh]" 
+                                />
+                              </DialogContent>
+                            </Dialog>
                           ))}
                         </div>
                       )}
