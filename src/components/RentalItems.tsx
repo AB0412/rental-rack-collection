@@ -10,6 +10,7 @@ type RentalItem = {
   category: 'furniture' | 'tent' | 'stage';
   description: string;
   image?: string;
+  additionalImages?: string[];
 };
 
 const rentalItems: RentalItem[] = [
@@ -68,7 +69,11 @@ const rentalItems: RentalItem[] = [
     icon: <Tent className="h-10 w-10 text-rental-DEFAULT" />,
     category: 'tent',
     description: "20×30 gazebo style tent, elegant option for special events.",
-    image: "/lovable-uploads/f935d5e3-5a78-4b5e-9321-81cfdf7492db.png"
+    image: "/lovable-uploads/f935d5e3-5a78-4b5e-9321-81cfdf7492db.png",
+    additionalImages: [
+      "/lovable-uploads/98ff5a62-d9c4-44ee-b572-d42184196aff.png",
+      "/lovable-uploads/3827f801-7ca5-4425-bb39-8373294608db.png"
+    ]
   },
   {
     id: 8,
@@ -137,12 +142,24 @@ const RentalItems = () => {
               <Card key={item.id} className="hover:shadow-lg transition-shadow">
                 <CardHeader className="pb-2">
                   {item.image ? (
-                    <div className="flex justify-center">
+                    <div className="flex flex-col justify-center">
                       <img 
                         src={item.image} 
                         alt={item.name} 
                         className="h-48 object-contain mb-4"
                       />
+                      {item.additionalImages && item.additionalImages.length > 0 && (
+                        <div className="grid grid-cols-2 gap-2 mt-2">
+                          {item.additionalImages.map((img, index) => (
+                            <img 
+                              key={index}
+                              src={img} 
+                              alt={`${item.name} view ${index + 1}`} 
+                              className="h-24 w-full object-cover rounded-md"
+                            />
+                          ))}
+                        </div>
+                      )}
                     </div>
                   ) : (
                     <div className="flex justify-center">{item.icon}</div>
