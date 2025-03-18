@@ -61,7 +61,11 @@ const rentalItems: RentalItem[] = [
     price: 200,
     icon: <Tent className="h-10 w-10 text-rental-DEFAULT" />,
     category: 'tent',
-    description: "10×30 rectangular tent, provides shelter for medium-sized gatherings."
+    description: "10×30 rectangular tent, provides shelter for medium-sized gatherings.",
+    image: "/lovable-uploads/7f8538bf-e3e6-4936-b7f6-2c2e85f6ca1c.png",
+    additionalImages: [
+      "/lovable-uploads/77dabfc7-3ff3-4f93-a4e8-7d0c5876b0d1.png"
+    ]
   },
   {
     id: 7,
@@ -82,7 +86,8 @@ const rentalItems: RentalItem[] = [
     price: 400,
     icon: <Tent className="h-10 w-10 text-rental-DEFAULT" />,
     category: 'tent',
-    description: "20×40 rectangular tent, our largest tent option for big events."
+    description: "20×40 rectangular tent, our largest tent option for big events.",
+    image: "/lovable-uploads/236a3b81-fffa-4db6-abe5-9ee6cd5921e6.png"
   },
   {
     id: 9,
