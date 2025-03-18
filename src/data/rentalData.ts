@@ -52,7 +52,9 @@ export const rentalItems: RentalItem[] = [
     description: "10×30 rectangular tent, provides shelter for medium-sized gatherings.",
     image: "/lovable-uploads/7f8538bf-e3e6-4936-b7f6-2c2e85f6ca1c.png",
     additionalImages: [
-      "/lovable-uploads/77dabfc7-3ff3-4f93-a4e8-7d0c5876b0d1.png"
+      "/lovable-uploads/77dabfc7-3ff3-4f93-a4e8-7d0c5876b0d1.png",
+      "/lovable-uploads/f135c3bb-a58a-4a4c-a41f-49f97c6e1eba.png",
+      "/lovable-uploads/8cff1aa4-18cf-476a-98e2-cb9bfa659acc.png"
     ]
   },
   {
