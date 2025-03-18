@@ -46,7 +46,7 @@ export const rentalItems: RentalItem[] = [
   {
     id: 6,
     name: "10×30 Rectangular Tent",
-    price: 200,
+    price: 175,
     icon: <Tent className="h-10 w-10 text-rental-DEFAULT" />,
     category: 'tent',
     description: "10×30 rectangular tent, provides shelter for medium-sized gatherings.",
@@ -60,7 +60,7 @@ export const rentalItems: RentalItem[] = [
   {
     id: 7,
     name: "20×30 Gazebo Style Tent",
-    price: 300,
+    price: 225,
     icon: <Tent className="h-10 w-10 text-rental-DEFAULT" />,
     category: 'tent',
     description: "20×30 gazebo style tent, elegant option for special events.",
@@ -73,7 +73,7 @@ export const rentalItems: RentalItem[] = [
   {
     id: 8,
     name: "20×40 Rectangular Tent",
-    price: 400,
+    price: 275,
     icon: <Tent className="h-10 w-10 text-rental-DEFAULT" />,
     category: 'tent',
     description: "20×40 rectangular tent, our largest tent option for big events.",
