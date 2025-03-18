@@ -24,21 +24,13 @@ const Hero = () => {
           <p className="text-xl md:text-2xl mb-8">
             From chairs and tables to tents and stages, we have everything you need to make your event a success.
           </p>
-          <div className="space-x-4">
+          <div>
             <Button 
               onClick={scrollToInventory} 
               className="bg-rental-accent hover:bg-amber-600 text-white"
               size="lg"
             >
               View Inventory
-            </Button>
-            <Button 
-              variant="outline" 
-              className="text-white border-white hover:bg-white/10"
-              size="lg"
-              asChild
-            >
-              <a href="#contact">Contact Us</a>
             </Button>
           </div>
         </div>

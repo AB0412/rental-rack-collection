@@ -26,9 +26,6 @@ const Navbar = () => {
             <a href="#tents" className="text-gray-700 hover:text-rental-DEFAULT transition-colors">
               Tents & Stages
             </a>
-            <a href="#contact" className="text-gray-700 hover:text-rental-DEFAULT transition-colors">
-              Contact
-            </a>
           </div>
 
           {/* Mobile Navigation Toggle */}
@@ -66,13 +63,6 @@ const Navbar = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Tents & Stages
-              </a>
-              <a 
-                href="#contact" 
-                className="text-gray-700 hover:text-rental-DEFAULT transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Contact
               </a>
             </div>
           </div>
