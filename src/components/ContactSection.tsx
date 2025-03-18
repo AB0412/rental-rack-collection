@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone } from "lucide-react";
 
 const ContactSection = () => {
   const handleSubmit = (event: React.FormEvent) => {
@@ -22,7 +21,7 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="max-w-2xl mx-auto">
           <Card>
             <CardContent className="p-6">
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -61,20 +60,6 @@ const ContactSection = () => {
               </form>
             </CardContent>
           </Card>
-
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold mb-4 text-rental-dark">Contact Information</h3>
-            <div className="space-y-4">
-              <div className="flex items-center space-x-4">
-                <Phone className="h-5 w-5 text-rental-DEFAULT" />
-                <p className="text-gray-600">(123) 456-7890</p>
-              </div>
-              <div className="flex items-center space-x-4">
-                <Mail className="h-5 w-5 text-rental-DEFAULT" />
-                <p className="text-gray-600">info@rentalrack.com</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
